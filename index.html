@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="A modern Guess the Number game built with HTML, CSS and JavaScript."
+    >
+
+    <title>Guess The Number | JavaScript Game</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="game-wrapper">
+
+        <!-- Header -->
+        <header class="game-header">
+
+            <div class="game-icon">
+                🎯
+            </div>
+
+            <p class="eyebrow">
+                JAVASCRIPT GAME
+            </p>
+
+            <h1>
+                Guess The Number
+            </h1>
+
+            <p class="subtitle">
+                I'm thinking of a number between
+                <strong>1</strong> and <strong>100</strong>.
+            </p>
+
+        </header>
+
+
+        <!-- Game Card -->
+        <section class="game-card">
+
+            <div class="attempt-info">
+
+                <div class="info-item">
+                    <span class="info-label">
+                        ATTEMPTS LEFT
+                    </span>
+
+                    <span
+                        id="remaining"
+                        class="info-value"
+                    >
+                        10
+                    </span>
+                </div>
+
+
+                <div class="info-divider"></div>
+
+
+                <div class="info-item">
+                    <span class="info-label">
+                        RANGE
+                    </span>
+
+                    <span class="info-value">
+                        1 - 100
+                    </span>
+                </div>
+
+            </div>
+
+
+            <!-- Guess Form -->
+            <form id="guessForm">
+
+                <label for="guessField">
+                    Enter your guess
+                </label>
+
+                <input
+                    type="number"
+                    id="guessField"
+                    class="guessField"
+                    placeholder="e.g. 50"
+                    min="1"
+                    max="100"
+                    autocomplete="off"
+                >
+
+                <button
+                    type="submit"
+                    id="subt"
+                    class="guessSubmit"
+                >
+                    Submit Guess
+                    <span>→</span>
+                </button>
+
+            </form>
+
+
+            <!-- Result Message -->
+            <div
+                class="message-container"
+                aria-live="polite"
+            >
+
+                <p class="lowOrHi">
+                    Make your first guess!
+                </p>
+
+            </div>
+
+
+            <!-- Previous Guesses -->
+            <div class="previous-section">
+
+                <div class="section-heading">
+
+                    <span>
+                        Previous Guesses
+                    </span>
+
+                    <span
+                        id="guessCount"
+                        class="guess-count"
+                    >
+                        0
+                    </span>
+
+                </div>
+
+
+                <div
+                    id="guesses"
+                    class="guesses"
+                >
+                    <span class="empty-guesses">
+                        Your guesses will appear here
+                    </span>
+                </div>
+
+            </div>
+
+
+            <!-- Progress -->
+            <div class="progress-wrapper">
+
+                <div class="progress-header">
+
+                    <span>
+                        Game Progress
+                    </span>
+
+                    <span id="progressText">
+                        0 / 10
+                    </span>
+
+                </div>
+
+                <div class="progress-bar">
+
+                    <div
+                        id="progress"
+                        class="progress"
+                    ></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- New Game -->
+        <div
+            id="gameOver"
+            class="game-over hidden"
+        >
+
+            <div class="result-icon">
+                🏆
+            </div>
+
+            <p class="result-label">
+                GAME OVER
+            </p>
+
+            <h2 id="finalMessage">
+                Congratulations!
+            </h2>
+
+            <p id="finalDescription">
+                You guessed the correct number.
+            </p>
+
+            <button
+                id="newGame"
+                class="new-game"
+                type="button"
+            >
+                Play Again
+                <span>↻</span>
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
