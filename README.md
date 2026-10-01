@@ -1,5 +1,13 @@
 # Guess Number Game
 
-A simple and interactive Guess Number Game built with HTML, CSS, and JavaScript.
+A simple Guess Number Game built with HTML, CSS and JavaScript.
 
-Players try to guess a randomly generated number, with feedback provided for each guess until the correct number is found.
+## 🚀 Live Demo
+
+[Play Guess Number Game](https://nadeemmanj.github.io/Guess-Number-Game/)
+
+## 🛠️ Technologies
+
+- HTML
+- CSS
+- JavaScript
